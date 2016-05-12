@@ -1,1 +1,1 @@
-index
+<?php get_header ?>
