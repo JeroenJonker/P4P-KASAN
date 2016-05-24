@@ -36,9 +36,3 @@ add_action('after_setup_theme', 'basketbal_setup');
 
 add_action( 'after_setup_theme', 'extra_setup' );
 ?>
-
-<?php
-register_nav_menus(array(
-    'primary' => __('Primary Menu'),
-    'footer' => __('Footer Menu'),
-)); ?>
