@@ -9,8 +9,13 @@ if(have_posts()) :
         if ($counter == 0)
         { ?>
             <article class="first-post">
-                <?php
-                the_post_thumbnail(); ?>
+                <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                <img class="testzor" src="<?php echo $image[0]; ?>"/>
+                <!--div id="custom-bg" style="background-image: url('<?php echo $image[0]; ?>')">
+
+                </div-->
+                <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
             </article> <?php
