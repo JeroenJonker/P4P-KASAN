@@ -35,4 +35,5 @@ add_filter ('wp_nav_menu_args', 'set_container_class');
 add_action('after_setup_theme', 'basketbal_setup');
 
 add_action( 'after_setup_theme', 'extra_setup' );
+
 ?>
