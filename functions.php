@@ -20,6 +20,9 @@ function basketbal_setup() {
     add_image_size('small-thumbnail', 180, 120,true);
     add_image_size('banner-image', 920, 210, true);
     add_image_size('post-thumbnail', 180, 120,true);
+    
+    // Add post-format support
+    add_theme_support('post-formats', array('gallery','video','image'));
 }
 
 function extra_setup() {
