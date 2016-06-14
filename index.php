@@ -4,7 +4,7 @@ get_header();
 ?>
 <div class="container">
     
-    <iframe class="vimeoPlayers" src="https://player.vimeo.com/video/22884674?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe class="vimeoPlayers" src="https://player.vimeo.com/video/22884674?autoplay=1&automute=0color=ffffff&title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     <?php 
   (int)$counter = 0;
 if(have_posts()) :  
