@@ -12,7 +12,7 @@ if(have_posts()) :
     {  ?><?php
             if ($counter == 0)
         {
-            ?> <article class="first-post">
+            ?> <article class="first-post" id="boxnr<?php echo $counter; ?>">
                     <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'gsdf' );?>
                         <div id="post" class="first-article" 
                              style="background: linear-gradient(
@@ -29,7 +29,7 @@ if(have_posts()) :
         }
         if ($counter == 1)
         {
-            ?> <article class="second-post">
+            ?> <article class="second-post" id="boxnr<?php echo $counter; ?>">
                     <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hoofdnieuws-image' );?>
                         <div id="post" class="first-article" 
                              style="background: linear-gradient(
@@ -107,7 +107,7 @@ if(have_posts()) :
         }
         if ($counter == 2)
         {
-            ?> <article class="second-post">
+            ?> <article class="second-post" id="boxnr<?php echo $counter; ?>">
                     <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hoofdnieuws-image' );?>
                         <div id="post" class="first-article" 
                              style="background: linear-gradient(
@@ -124,7 +124,7 @@ if(have_posts()) :
         
         if ($counter == 3)
         {
-            ?> <article class="second-post">
+            ?> <article class="second-post" id="boxnr<?php echo $counter; ?>">
                     <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hoofdnieuws-image' );?>
                         <div id="post" class="first-article" 
                              style="background: linear-gradient(
@@ -141,7 +141,7 @@ if(have_posts()) :
         if ($counter == 4)
         {   
             ?>
-            <div class="container-box">
+            <div class="container-box" id="boxnr<?php echo $counter; ?>">
                  <h2> <?php the_title(); ?></h2>
                     <div class="gallery-box">
                         <div class="wallpaper-box">
@@ -151,7 +151,7 @@ if(have_posts()) :
     <?php }
      if ($counter == 5)
         {
-            ?><article class="post-gallery">
+            ?><article class="post-gallery" id="boxnr<?php echo $counter; ?>">
                 <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hoofdnieuws-image' );?>
                     <div id="post" class="first-article" style="background-image: url('<?php echo $thumb['0'];?>')"> 
                     </div>
