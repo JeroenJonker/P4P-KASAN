@@ -8,7 +8,6 @@ add_action('wp_enqueue_scripts', 'basketbal_resources');
 
 //theme setup
 function basketbal_setup() {
-    
     //Add naviagtion menu's
     register_nav_menus(array(
         'footer' => __('Footer Menu'),
