@@ -328,6 +328,7 @@ input {
 
 /* Page spul */
 
+
 .first-article {
   -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.59);
   -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.59);
@@ -336,13 +337,11 @@ input {
 }
 .postTitle {
   color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  /*color: black;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
   margin: 0 auto;
   text-align:center;
   font-family: 'Trebuchet MS';
-  font-size: 50px;
+  font-size: 60px;
   padding: 40px;
 }
 
@@ -421,4 +420,17 @@ input {
 }
 .clear {
   clear: both;
+}
+
+@media screen and (max-width:800px){
+  .columnHeading{
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .column {
+    float:none;
+    width: 75%;
+    
+  }
 }
