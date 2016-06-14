@@ -20,17 +20,18 @@
                     365 );
 
           $check1 = $check2 = $check3 = false;
-          $nameErr = $emailErr = $telefoon = "";
+          $captchaErr = $lnameErr = $nameErr = $emailErr = $telefoon = "";
           $name = $email = $telefoon = "";
           if ($_SERVER["REQUEST_METHOD"] == "POST")
           {
-              if (empty($_POST["name"]))
+              /* voornaam */
+              if (empty($_POST["firstname"]))
               {
-                $nameErr = "Name is required";
+                $nameErr = "*Firstname is required";
               } 
               else 
               {
-                $name = test_input($_POST["name"]);
+                $name = test_input($_POST["firstname"]);
                 // check if name only contains letters and whitespace
                 if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
                 {
@@ -41,9 +42,30 @@
                       $check1 = true;
                   }
               }
+              
+              /*achternaam */
+              if (empty($_POST["lastname"]))
+              {
+                $lnameErr = "*Lastname is required";
+              } 
+              else 
+              {
+                $name = test_input($_POST["lastname"]);
+                // check if name only contains letters and whitespace
+                if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
+                {
+                  $lnameErr = "Only letters and white space allowed"; 
+                }
+                  else 
+                  {
+                      $check1 = true;
+                  }
+              }
+              
+              /* email */
               if (empty($_POST["email"])) 
               {
-                  $emailErr = "Email is required";
+                  $emailErr = "*Email is required";
               } 
               else 
               {
@@ -68,11 +90,10 @@
               if(strtolower($_POST['answer']) == $aAnswers[$_SESSION['key']])
               {
                   $check3 = true;
-                  $content[] = '<p>Je hebt het juiste antwoord ingevuld.<p>';
               }
              else
               {
-                  $content[] = '<p>Captcha niet juist ingevuld!</p>';
+                 $captchaErr = "*Captcha niet juist ingevuld!";
               }
           
              if ($check1 == true && $check2 == true && $check3 == true)
@@ -101,15 +122,21 @@
           
           <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
               <div id='contact-left'>
-                <span class="error">* <?php echo $nameErr;?></span>
-                Naam:<br>
-                <input type="text" name="name"><br>
-                <span class="error">* <?php echo $emailErr;?></span>
-                Email:<br>
-                <input type="text" name="email"><br>
-                Telefoon:<br>
-                <input type="text" name="telefoon"><br>
-                <label class="field"><?php echo $aQuestions[$_SESSION['key']]; ?></label><br>
+                <label class="left_label">Voornaam:</label><label class="left_label">Achternaam:</label></br>
+              <?php if ($nameErr != "" || $lnameErr != "") { ?>
+                  <label class="left_label error" ><?php echo $nameErr;?></label><label class="left_label error"><?php echo $lnameErr;?></label></br>
+                          <?php } ?>
+                <input type="text" name="firstname">&nbsp<input type="text" name="lastname"><br>
+                <label class="left_label">Email:</label><label class="left_label">Telefoonnr:</label><br>
+          <?php if ($emailErr != "") { ?>
+                  <label class="left_label error"><?php echo $emailErr;?></label></br>
+                <?php } ?>
+                <input type="text" name="email">&nbsp<input type="text" name="telefoon"><br>
+                  <span>CAPTCHA</span></br>
+                <?php if ($captchaErr != "") { ?>
+                    <label class="error"><?php echo $captchaErr;?></label></br>
+                <?php } ?>
+                <label><?php echo $aQuestions[$_SESSION['key']]; ?></label></br>
                 <input type="text" name="answer" />
               </div>
               <div id='contact-right'>
@@ -119,24 +146,6 @@
                 <input id='button' type="submit" name="submit" value="Submit">  
             </div>
           </form>
-          <?php
-        if(isset($errors))
-        {
-            echo '<ul>';
-            foreach($errors as $error);
-            {
-                echo '<li>'.$error.'</li>';
-            }
-            echo '</ul>';
-        }
-        elseif(isset($content))
-        {
-            foreach($content as $line)
-            {
-                echo $line;
-            }
-        }
-          ?>
           <img class="footer-logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo KASAN Events text.png" alt="logo"/>
       </footer>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.12.4.min.js"></script>

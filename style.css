@@ -276,7 +276,7 @@ input {
     background-color: lightgray;
     width: 30%;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -421,4 +421,16 @@ input {
 }
 .clear {
   clear: both;
+}
+.left_label {
+    float: left;
+    width: 173px;
+}
+
+.right_label {
+    float: right;
+}
+
+.error {
+    color: red;
 }

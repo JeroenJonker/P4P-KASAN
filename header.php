@@ -33,7 +33,7 @@ if( $query->have_posts()) : ?>
                     </div>
             <div class="mobile-right">
         <?php  } ?>
-                <div class="content">
+                <div class="content" id="<?php echo $counter; ?>">
                     <h2><?php the_title(); ?></h2>
                 </div> 
             <?php $counter++;
