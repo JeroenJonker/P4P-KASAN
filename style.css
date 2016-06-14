@@ -418,10 +418,11 @@ input {
   font-size: 45px;
 
 }
+
 .clear {
   clear: both;
 }
-<<<<<<< HEAD
+
 .left_label {
     float: left;
     width: 173px;
@@ -434,7 +435,6 @@ input {
 .error {
     color: red;
 }
-=======
 
 @media screen and (max-width:800px){
   .columnHeading{
@@ -447,5 +447,12 @@ input {
     width: 75%;
     
   }
+    #contact-right
+    {
+        display: block;
+    }
+    #contact-left
+    {
+        padding-right: 0px;
+    }
 }
->>>>>>> 6a586a42165f7866d9d18798a0928f347bfec5fa
