@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
@@ -42,7 +38,7 @@ if( $query->have_posts()) : ?>
 
             else : echo " PEEP";
             endif;
-                        wp_reset_postdata(); ?>
+?>
 		</nav>
 
 	</header> 
