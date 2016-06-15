@@ -264,7 +264,7 @@ form {
     vertical-align: top;
 }
 
-#contact-header {
+.contact-header {
     padding-top: 15px;
     text-align: center;
     font-family: 'PT Serif';
@@ -298,7 +298,7 @@ form {
 	/*width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;*/
-	background: url("test4.jpg")  top center;
+/*	background: url("/IMG/test4.jpg")  top center;*/
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

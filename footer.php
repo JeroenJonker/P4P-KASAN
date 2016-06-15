@@ -104,23 +104,18 @@
                 $headers = "";
 //                mail( $email, "Bevestiging aanvraag", $message, $headers );
 //                mail( $to, "Aanvraag", "telefoon: ".$telefoon."email: ".$email, $headers );
-
-              echo "yes";
              }
-              echo $_POST['answer'] + " ";
+              echo $_POST['answer'];
               echo $aAnswers[$_SESSION['key']];
+              echo $_SESSION['aantal'];
           }
-            $_SESSION['key'] = array_rand($aQuestions);
-            function test_input($data)
-            {
-              $data = trim($data);
-              $data = stripslashes($data);
-              $data = htmlspecialchars($data);
-              return $data;
-            }
           ?>
-          <h2 id='contact-header'> Contact</h2>
+          <h2 class='contact-header'> Contact</h2>
           <div class='white-streep'></div>
+          <?php if ($check1 == true && $check2 == true && $check3 == true)
+                { 
+                ?>   <h2 class='contact-header'> "Aanvraag is verstuurd!" </h2></br> <?php
+                }?>
           
           <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
               <div id='contact-left'>
@@ -137,7 +132,21 @@
                 <label class="label_center">CAPTCHA</label></br>
               <?php if ($captchaErr != "") { ?>
                         <label class="error"><?php echo $captchaErr;?></label></br>
-                <?php } ?>
+                <?php } 
+                if(!isset($_SESSION['aantal']))
+                {
+                    $_SESSION['aantal'] = 0;
+                }
+                $_SESSION['aantal'] = $_SESSION['aantal'] + 1;
+                $_SESSION['key'] = array_rand($aQuestions);
+                function test_input($data)
+                {
+                  $data = trim($data);
+                  $data = stripslashes($data);
+                  $data = htmlspecialchars($data);
+                  return $data;
+                }
+                ?>
                 <label><?php echo $aQuestions[$_SESSION['key']]; ?></label></br>
                 <input class="inputbox" type="text" name="answer" />
               </div>

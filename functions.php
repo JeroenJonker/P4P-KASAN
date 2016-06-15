@@ -1,4 +1,18 @@
 <?php
+function myStartSession() {
+    if(!session_id()) {
+        session_start();
+    }
+}
+add_action('init', 'myStartSession');
+
+//function myEndSession() {
+//    session_destroy ();
+//}
+//
+//add_action('wp_logout', 'myEndSession');
+//add_action('wp_login', 'myEndSession');
+
 function basketbal_resources() {
     
     wp_enqueue_style('style', get_stylesheet_uri());
