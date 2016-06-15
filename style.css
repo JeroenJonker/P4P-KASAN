@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+
 body {
     margin: 0;
 }
@@ -265,8 +267,9 @@ form {
 #contact-header {
     padding-top: 15px;
     text-align: center;
+    font-family: 'PT Serif';
 }
-input {
+.inputbox {
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -340,7 +343,7 @@ input {
   /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
   margin: 0 auto;
   text-align:center;
-  font-family: 'Trebuchet MS';
+  font-family: 'PT Serif','Trebuchet MS';
   font-size: 60px;
   padding: 40px;
 }
@@ -424,6 +427,7 @@ input {
 }
 
 .left_label {
+    font-family: 'PT Serif',sans-serif;
     float: left;
     width: 173px;
 }
@@ -434,6 +438,7 @@ input {
 
 .error {
     color: red;
+    font-size: small;
 }
 
 @media screen and (max-width:800px){
@@ -455,4 +460,26 @@ input {
     {
         padding-right: 0px;
     }
+}
+.label_center {
+    font-family: 'PT Serif', sans-serif;
+}
+
+#button {
+    font-family: 'PT Serif';
+    font-size: inherit;
+    background-color: white;
+    border-radius: 7px;
+    border: none;
+    border: 1px solid black;
+    height: 30px;
+    width: 75px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#button:hover {
+    background-color: gray;
+    color: white;
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.5);
 }

@@ -107,6 +107,8 @@
 
               echo "yes";
              }
+              echo $_POST['answer'] + " ";
+              echo $aAnswers[$_SESSION['key']];
           }
             $_SESSION['key'] = array_rand($aQuestions);
             function test_input($data)
@@ -124,26 +126,26 @@
               <div id='contact-left'>
                 <label class="left_label">Voornaam:</label><label class="left_label">Achternaam:</label></br>
               <?php if ($nameErr != "" || $lnameErr != "") { ?>
-                  <label class="left_label error" ><?php echo $nameErr;?></label><label class="left_label error"><?php echo $lnameErr;?></label></br>
+                        <label class="left_label error" ><?php echo $nameErr;?></label><label class="left_label error"><?php echo $lnameErr;?></label></br>
                           <?php } ?>
-                <input type="text" name="firstname">&nbsp<input type="text" name="lastname"><br>
+                <input class="inputbox" type="text" name="firstname">&nbsp<input class="inputbox" type="text" name="lastname"><br>
                 <label class="left_label">Email:</label><label class="left_label">Telefoonnr:</label><br>
-          <?php if ($emailErr != "") { ?>
-                  <label class="left_label error"><?php echo $emailErr;?></label></br>
+              <?php if ($emailErr != "") { ?>
+                        <label class="left_label error"><?php echo $emailErr;?></label><span class="left_label error">&nbsp</span></br>
                 <?php } ?>
-                <input type="text" name="email">&nbsp<input type="text" name="telefoon"><br>
-                  <span>CAPTCHA</span></br>
-                <?php if ($captchaErr != "") { ?>
-                    <label class="error"><?php echo $captchaErr;?></label></br>
+                <input class="inputbox" type="text" name="email">&nbsp<input class="inputbox" type="text" name="telefoon"><br>
+                <label class="label_center">CAPTCHA</label></br>
+              <?php if ($captchaErr != "") { ?>
+                        <label class="error"><?php echo $captchaErr;?></label></br>
                 <?php } ?>
                 <label><?php echo $aQuestions[$_SESSION['key']]; ?></label></br>
-                <input type="text" name="answer" />
+                <input class="inputbox" type="text" name="answer" />
               </div>
               <div id='contact-right'>
-                Description:<br>
-                  <textarea rows="6" cols="50">
-                </textarea><br>
-                <input id='button' type="submit" name="submit" value="Submit">  
+                  <label class="label_center">Description:</label><br>
+                  <textarea class="inputbox" rows="6" cols="50">
+                  </textarea><br>
+                  <input id='button' type="submit" name="submit" value="Submit"/>  
             </div>
           </form>
           <img class="footer-logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo KASAN Events text.png" alt="logo"/>
