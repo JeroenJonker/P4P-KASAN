@@ -4,7 +4,32 @@ get_header();
 ?>
 <div class="container">
     
-    <iframe class="vimeoPlayers" src="https://player.vimeo.com/video/22884674?autoplay=1&automute=0color=ffffff&title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe class="vimeoPlayers" id="player" src="https://player.vimeo.com/video/22884674?api=1&amp;player_id=player&autoplay=1&automute=1&color=ffffff&title=0&byline=0&portrait=0&controls=0" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        
+       
+		<script src="//f.vimeocdn.com/js/froogaloop2.min.js">
+		
+		
+		var playerYO;
+		
+		$( document ).ready(function() {
+			
+			
+			jQuery('#player').each(function(){
+				playerYO = Froogaloop(this);
+				playerYO.addEvent('ready', ready);
+			});
+			
+			
+			
+		});
+		
+		function ready(e){
+			console.log("JOP", playerYO);
+			playerYO.api('setVolume',0);
+		}
+        </script>
+        </iframe>
     <?php 
   (int)$counter = 0;
 if(have_posts()) :  
@@ -52,12 +77,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 1;
+                                $my_titleid = 41;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 1;//This is page id or post id
+                                $my_postid = 41;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);
@@ -71,12 +96,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 57;
+                                $my_titleid = 39;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 57;//This is page id or post id
+                                $my_postid = 39;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);
@@ -90,12 +115,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 50;
+                                $my_titleid = 37;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 50;//This is page id or post id
+                                $my_postid = 37;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);
