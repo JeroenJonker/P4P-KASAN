@@ -6,7 +6,7 @@ $(document).ready(function(e) {
     
     $(".logo").click(function() {
     $('html, body').animate({
-        scrollTop: $(".vimeoPlayers").offset().top
+        scrollTop: $(".vimeoPlayers").offset().top -70
     }, 2000)});
     
     $(".logo, #0, #1, #2, #3, #4").hover(function(){
