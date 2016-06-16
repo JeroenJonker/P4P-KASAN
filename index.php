@@ -52,12 +52,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 1;
+                                $my_titleid = 41;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 1;//This is page id or post id
+                                $my_postid = 41;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);
@@ -71,12 +71,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 57;
+                                $my_titleid = 39;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 57;//This is page id or post id
+                                $my_postid = 39;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);
@@ -90,12 +90,12 @@ if(have_posts()) :
                             <div class = "column">
                                 <h1 class="columnHeading">
                                 <?php 
-                                $my_titleid = 50;
+                                $my_titleid = 37;
                                 $title_post = get_the_title($my_titleid);
                                 echo $title_post;
                                 ?></h1>
                                 <?php 
-                                $my_postid = 50;//This is page id or post id
+                                $my_postid = 37;//This is page id or post id
                                 $content_post = get_post($my_postid);
                                 $content = $content_post->post_content;
                                 $content = apply_filters('the_content', $content);

@@ -284,10 +284,10 @@ form {
     /*border: black solid 1px;*/
 }
 
-
 .column {  
-  font-family: 'Trebuchet MS';
-  font-size: 13px;
+  font-family: 'ABeeZee';
+  font-size: 17px;
+    line-height: 90%;
   color: black;
   /*border: 1px purple solid;*/
   width: 20%;
