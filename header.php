@@ -19,14 +19,20 @@ if( $query->have_posts()) : ?>
         $query->the_post(); ?>
             <?php if ($counter == 0)
                 { ?>
+            <div class="mobile-top">
+                <img class="logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo.png" alt="logo"/>
+            </div>
+            <div class="kopjes">
             <div class="mobile-left">
                 <?php }
              if ($counter == 2)
                 { ?>
             </div>
+<!--
                     <div class="content mobile-top">
                         <img class="logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo.png" alt="logo"/>
                     </div>
+-->
             <div class="mobile-right">
         <?php  } ?>
                 <div class="content" id="<?php echo $counter; ?>">
@@ -34,8 +40,7 @@ if( $query->have_posts()) : ?>
                 </div> 
             <?php $counter++;
 } ?>
-            </div> <?php
-
+                </div></div> <?php
             else : echo " PEEP";
             endif;
 ?>

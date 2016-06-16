@@ -4,29 +4,38 @@ $(document).ready(function(e) {
     });
     handleStageResize();
     
+    $(".logo").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".vimeoPlayers").offset().top
+    }, 2000)});
+    
+    $(".logo, #0, #1, #2, #3, #4").hover(function(){
+        $(this).css('cursor','pointer');
+    });
+    
     $("#0").click(function() {
     $('html, body').animate({
-        scrollTop: $("#boxnr0").offset().top
+        scrollTop: $("#boxnr0").offset().top -70
     }, 2000)});
     
     $("#1").click(function() {
     $('html, body').animate({
-        scrollTop: $("#boxnr1").offset().top
+        scrollTop: $("#boxnr1").offset().top -70
     }, 2000)});
         
     $("#2").click(function() {
     $('html, body').animate({
-        scrollTop: $("#boxnr2").offset().top
+        scrollTop: $("#boxnr2").offset().top -70
     }, 2000)});
     
     $("#3").click(function() {
     $('html, body').animate({
-        scrollTop: $("#boxnr3").offset().top
+        scrollTop: $("#boxnr3").offset().top -70
     }, 2000)});
     
     $("#4").click(function() {
     $('html, body').animate({
-        scrollTop: $("#boxnr4").offset().top
+        scrollTop: $("#boxnr4").offset().top -70
     }, 2000)});
     
 //    $("form").hide();
