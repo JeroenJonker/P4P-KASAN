@@ -5,18 +5,6 @@ body {
 }
 /* Navigation Menu  */
 
-.site-nav ul{
-    margin: 0;
-    padding: 0;
-}
-
-
-.site-nav ul li {
-    list-style:none;
-    float: left;
-}
-/* Site Header menus */
-
 .site-header nav{ 
     -webkit-box-shadow: 0px 10px 4px 0px rgba(50, 50, 50, 0.2);
     -moz-box-shadow:    0px 10px 4px 0px rgba(50, 50, 50, 0.2);
@@ -52,7 +40,6 @@ body {
 }
 .content{
     float:left;
-    /*color: #A8A8A8;*/
     font-family: 'ABeeZee', Arial Black, Gadget, sans-serif;
     font-size: 14px;
     width: 45%;
@@ -62,13 +49,8 @@ body {
 
 .content:hover {
   color: #A8A8A8;
-  
 }
 .logo{
-/*
-    width: 80px;
-    height: 80px;
-*/
     width: 100%;
     margin-top: -5px;
 }
@@ -168,6 +150,7 @@ form {
 }
 
 .contact-header {
+    margin-top: -1px;
     padding-top: 15px;
     text-align: center;
     font-family: 'PT Serif';
@@ -386,9 +369,6 @@ form {
     color: white;
     text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.5);
 }
-
-
-
 .vimeoPlayers {
     margin-top: 70px;
 }
