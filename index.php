@@ -157,7 +157,7 @@ if(have_posts()) :
                  <h2> <?php the_title(); ?></h2>
                     <div class="gallery-box">
                         <div class="wallpaper-box">
-                            <?php the_content(); ?>
+                            <?php bdw_get_images(); ?>
                         </div>
                     </div>
     <?php }
