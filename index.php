@@ -186,7 +186,39 @@ if(have_posts()) :
     else : 
         echo '<p> No content </p>';
     endif;
-    ?> </div> <?php
+    ?> </div> 
+
+<!--
+<div class=carousel>
+
+  <ul class=panes>
+
+    <li>
+      <img src="" alt="">
+    </li>
+
+    <li>
+      <img src=pane-02.jpg alt="">
+    </li>
+
+    <li>
+      <img src=pane-03.jpg alt="">
+    </li>
+
+    <li>
+      <img src=pane-04.jpg alt="">
+    </li>
+
+    <li>
+      <img src=pane-05.jpg alt="">
+    </li>
+
+  </ul>
+
+</div>
+-->
+
+<?php
 get_footer();
 
 ?>

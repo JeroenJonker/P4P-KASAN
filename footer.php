@@ -157,6 +157,27 @@
                   <input id='button' type="submit" name="submit" value="Submit"/>  
             </div>
           </form>
+<div class="contact-info">
+            <div class="contact" id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        Tel. +31(0) 638503227
+                        Email: info@kasanevents.nl
+                    </p>
+                </div>
+                <div class="contact" id="contact2">
+                    <h2>Follow us</h2>
+                    <a href="https://www.instagram.com/kasanevents/"><img class="logoinsta" src="<?php bloginfo('template_directory'); ?>/IMG/insta.png" alt="logo"/></a>
+                    <a href="https://www.facebook.com/kasanevents/?fref=ts"><img class="logofb" src="<?php bloginfo('template_directory'); ?>/IMG/facebooklogo.png" alt="logo"/></a>
+                </div>
+                <div class="contact" id="contact3">
+                    <h2>Jobs</h2>
+                    <p>
+                        Should you wish to join our team
+                        Contact us at jobs@kasanevents.nl
+                    </p>
+            </div>
+</div>
           <img class="footer-logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo KASAN Events text.png" alt="logo"/>
       </footer>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.12.4.min.js"></script>
