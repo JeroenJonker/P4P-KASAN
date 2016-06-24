@@ -51,3 +51,39 @@ function handleStageResize(){
     var videoHeight = videoWidth / aspectRatio;
     $('.vimeoPlayers').css({height: videoHeight+"px"});
 };
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+};
+
+var slideIndext = 0;
+var feed = new Instafeed({
+    get: 'user',
+    userId: '3286950181',
+    accessToken: '3286950181.5142e9d.68651a14c72a4840935e943000d50104',
+    resolution: 'low_resolution',
+    template: '<a href="{{link}}"><img class="animation" src="{{image}}" /></a>',
+    after: function carouselt() {
+                var it;
+                var xt = document.getElementsByClassName("animation");
+                for (it = 0; it < xt.length; it++) {
+                    xt[it].style.display = "none"; 
+                }
+                slideIndext++;
+                if (slideIndext > xt.length) {slideIndext = 1} 
+                xt[slideIndext-1].style.display = "block"; 
+                setTimeout(carouselt, 2000); // Change image every 2 seconds
+            }
+});
+feed.run();

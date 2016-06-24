@@ -154,7 +154,7 @@ if(have_posts()) :
         {   
             ?>
             <div class="container-box" id="boxnr<?php echo $counter; ?>" style="background: url(<?php bloginfo('template_directory'); ?>/IMG/test4.jpg">
-                 <h2> <?php the_title(); ?></h2>
+                 <h2> Gallerij </h2>
                     <div class="gallery-box">
                         <div class="wallpaper-box">
                             <?php bdw_get_images(); ?>
@@ -164,14 +164,7 @@ if(have_posts()) :
      if ($counter == 5)
         {
             ?><article class="post-gallery" id="boxnr<?php echo $counter; ?>">
-                                    <?php if(has_post_thumbnail())
-                    { ?>
-                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hoofdnieuws-image' );?>
-                    <div id="post" class="first-article" style="background-image: url('<?php echo $thumb['0'];?>')"> 
-                    </div>
-                                    <?php } ?>
-                <div class="instagram-box">
-                    <?php the_content(); ?> 
+                <div id='instafeed'>
                 </div>
 
             </article>

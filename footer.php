@@ -179,7 +179,9 @@
             </div>
 </div>
           <img class="footer-logo" src="<?php bloginfo('template_directory'); ?>/IMG/Logo KASAN Events text.png" alt="logo"/>
+<div id='instagram-carroussel'></div>
       </footer>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/instafeed.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/voorbeeld.js"></script>
     </body>
