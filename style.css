@@ -209,11 +209,15 @@ form {
 .gallery-box{
 	width:50%;
     float:left;
+    	border-right: 3px solid white;
+    height: 320px;
 }
+/*
 .wallpaper-box{
 	border-right: 3px solid white;
 
 }
+*/
 
 /* Page spul */
 
@@ -470,7 +474,28 @@ form {
     margin: 0 auto;
 }
 
-.TESTING
-{
-    border: 5px solid red;
+.slideshowCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mySlides {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#gallery {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }

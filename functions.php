@@ -99,16 +99,16 @@ function bdw_get_images() {
         $iNum = $arrKeys[$x];
  
         // Get the thumbnail url for the attachment
-        $sThumbUrl = wp_get_attachment_thumb_url($iNum);
+//        $sThumbUrl = wp_get_attachment_thumb_url($iNum);
  
         // UNCOMMENT THIS IF YOU WANT THE FULL SIZE IMAGE INSTEAD OF THE THUMBNAIL
-        //$sImageUrl = wp_get_attachment_url($iNum);
+        $sImageUrl = wp_get_attachment_url($iNum);
  
         // Build the <img> string
         $sImgString = '<a href="' . get_permalink() . '">' .
-                            '<img class="TESTING mySlides" src="' . $sThumbUrl . '" width="150" height="150" alt="Thumbnail Image" title="Thumbnail Image" />' .
+                            '<img class="slideshowCenter mySlides" src="' . $sImageUrl . '" alt="Thumbnail Image" title="Thumbnail Image" />' .
                         '</a>';
- 
+// width="150" height="150"
         // Print the image
             $x = $x +1;
         echo $sImgString;

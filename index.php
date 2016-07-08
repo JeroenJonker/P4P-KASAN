@@ -156,17 +156,15 @@ if(have_posts()) :
             <div class="container-box" id="boxnr<?php echo $counter; ?>" style="background: url(<?php bloginfo('template_directory'); ?>/IMG/test4.jpg">
                  <h2> Gallerij </h2>
                     <div class="gallery-box">
-                        <div class="wallpaper-box">
-                            <?php bdw_get_images(); ?>
+                        <div id="gallery">
+                        <?php bdw_get_images(); ?>
                         </div>
                     </div>
     <?php }
      if ($counter == 5)
         {
             ?><article class="post-gallery" id="boxnr<?php echo $counter; ?>">
-                <div id='instafeed'>
-                </div>
-
+                <div id='instafeed'> </div>
             </article>
             </div><?php
         }?>

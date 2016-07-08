@@ -73,7 +73,7 @@ var feed = new Instafeed({
     userId: '3286950181',
     accessToken: '3286950181.5142e9d.68651a14c72a4840935e943000d50104',
     resolution: 'low_resolution',
-    template: '<a href="{{link}}"><img class="animation" src="{{image}}" /></a>',
+    template: '<a class="instagram-{{orientation}}" href="{{link}}"><img class="animation slideshowCenter" src="{{image}}" /></a>',
     after: function carouselt() {
                 var it;
                 var xt = document.getElementsByClassName("animation");
